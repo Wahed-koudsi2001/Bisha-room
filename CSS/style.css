@@ -1124,6 +1124,19 @@ select:focus {
     color: #fff;
     background-color: #03c3adb7;
 }
+@media (max-width: 768px) {
+    .hero .sub-title-2::before {
+        display: none;
+    }
+    .hero .sub-title-2 {
+        justify-content: center;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    .hero img {
+        margin-top: 5px;
+    }
+}
 @media (max-width: 500px) {
     .clock {
         height: 120px;
@@ -1136,4 +1149,7 @@ select:focus {
     .hero h1 {
         font-size: 40px;
     }
+}
+.new {
+    background-color: var(--main) !important;
 }
