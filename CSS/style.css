@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: "IBM Plex Sans Arabic", serif;
+    font-family: "IBM Plex Sans Arabic";
 }
 
 .page-banner .breadcrumbs-area ul li {
@@ -941,6 +941,18 @@ select:focus {
     height: 100%;
     background-color: #ececec;
 }
+.main-courses .box .time-date button {
+    border: none;
+    background-color: var(--second);
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: bold;
+}
 .main-courses .box .price-1 {
     padding-right: 10px;
     padding-bottom: 20px;
@@ -989,11 +1001,11 @@ select:focus {
     color: #777;
     font-size: 16px;
 }
-.hero a {
+.hero button {
     background-color: var(--main);
     border: none;
     color: #fff;
-    padding: 8px 20px;
+    padding: 10px 30px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1006,7 +1018,7 @@ select:focus {
     -o-transition: 0.2s ease;
     text-decoration: none;
 }
-.hero a:hover {
+.hero button:hover {
     background-color: #03c3adbd;
 }
 .timer-section {
@@ -1050,14 +1062,78 @@ select:focus {
     display: flex;
     align-items: center;
 }
+.steps .steps-item {
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 210px;
+}
+.steps h3 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.steps h3 span {
+    color: var(--second);
+}
+.steps .steps-item img {
+    width: 55px;
+    margin-bottom: 12px;
+}
+.steps .steps-item .setps-number {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 20px;
+    font-weight: 900;
+    border: 1px solid var(--bs-white);
+    border-radius: 64px;
+    transform: translateY(50%);
+    color: var(--bs-white);
+    background: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.btn-fixed {
+    position: fixed;
+    bottom: 10%;
+    left: 0;
+    background-color: var(--main);
+    color: #fff;
+    padding: 10px 27px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    display: none;
+}
+.btn-fixed.visible {
+    display: block;
+}
+.btn-fixed:hover {
+    color: #fff;
+    background-color: #03c3adb7;
+}
 @media (max-width: 500px) {
-    .clock{
+    .clock {
         height: 120px;
         width: 100%;
     }
     .clock div,
     .clock span {
+        font-size: 40px;
+    }
+    .hero h1 {
         font-size: 40px;
     }
 }

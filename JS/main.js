@@ -47,3 +47,17 @@ const countdown = setInterval(() => {
         document.querySelector(".clock").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+window.onscroll = function () {
+    let button = document.getElementById("submit-button");
+
+    if (document.documentElement.scrollTop > 100) {
+        button.classList.add("visible"); 
+    } else {
+        button.classList.remove("visible");
+    }
+};
