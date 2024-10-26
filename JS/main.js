@@ -1,11 +1,3 @@
-function scrolldiv() { $([document.documentElement, document.body]).animate({ scrollTop: $("#contact-page-section").offset().top }, 100); }
-var btn = $('.btn-fixed'); $(window).scroll(function () { if ($(window).scrollTop() > 100) { btn.addClass('show'); } else { btn.removeClass('show'); } }); btn.on('click', function (e) { e.preventDefault(); $([document.documentElement, document.body]).animate({ scrollTop: $("#contact-page-section").offset().top }, 100); }); function getTimeRemaining(endtime) { var t = Date.parse(endtime) - Date.parse(new Date()); var seconds = Math.floor((t / 1000) % 60); var minutes = Math.floor((t / 1000 / 60) % 60); var hours = Math.floor((t / (1000 * 60 * 60)) % 24); var days = Math.floor(t / (1000 * 60 * 60 * 24)); return { 'total': t, 'days': days, 'hours': hours, 'minutes': minutes, 'seconds': seconds }; }
-function initializeClock(id, endtime) {
-    var clock = document.getElementById(id); var daysSpan = clock.querySelector('.days'); var hoursSpan = clock.querySelector('.hours'); var minutesSpan = clock.querySelector('.minutes'); var secondsSpan = clock.querySelector('.seconds'); function updateClock() { var t = getTimeRemaining(endtime); daysSpan.innerHTML = ('0' + t.days).slice(-2); hoursSpan.innerHTML = ('0' + t.hours).slice(-2); minutesSpan.innerHTML = ('0' + t.minutes).slice(-2); secondsSpan.innerHTML = ('0' + t.seconds).slice(-2); if (t.total <= 0) { clearInterval(timeinterval); } }
-    updateClock(); var timeinterval = setInterval(updateClock, 1000);
-}
-var deadline = new Date(Date.parse(new Date()) + 1 * 24 * 60 * 60 * 1000); initializeClock('clockdiv', deadline); function sendMessage() { $("#sucsess-modal").modal("show"); setTimeout(function () { window.location.href = "https://numo.sa/ar/b/alghrf-altgary-alsnaaay-bynbaa"; }, 5000); }
-
 document.addEventListener('DOMContentLoaded', function () {
     const filterItems = document.querySelectorAll('.ul-courses li');
     const courses = document.querySelectorAll('.main-courses .box');
@@ -29,3 +21,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Set the countdown to 24 hours from the current time
+const targetDate = new Date().getTime() + 24 * 60 * 60 * 1000;
+
+// Update the countdown every second
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    // Time calculations for hours, minutes, and seconds
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the respective elements
+    document.getElementById("days").innerHTML = "00"; // Fixed value for 24 hours
+    document.getElementById("hour").innerHTML = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minute").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+    // If the countdown is over, display a message and clear the interval
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.querySelector(".clock").innerHTML = "EXPIRED";
+    }
+}, 1000);

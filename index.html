@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar" class="no-js">
+<html dir="rtl" lang="ar">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
@@ -9,16 +9,43 @@
     <meta name="csrf-token" content="">
     <title>غرفة بيشة</title>
     <link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="CSS/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <script src="JS/jquery.min.js" type="text/javascript"></script>
     <script src="JS/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" media="all" />
 </head>
 
 <body>
-    <section class="main-banner-wrap-layout2 has-animation">
-        <img src="imgs/bisha_banner.jpg" alt="Illustration">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12 text-center text-lg-end">
+                    <span class="sub-title-2">غرفة بيشة مدير التسويق</span>
+                    <h1>التسويق هو أكسجين مشروعك</h1>
+                    <p>
+                        التسويق هو فن وعلم يهدف إلى إيصال المنتجات والخدمات إلى الجمهور المستهدف وخلق الطلب عليها وتحقيق
+                        الربح
+                        للشركات. ويعتبر
+                        التسويق من أهم العوامل التي تساهم في نجاح أي شركة أو مشروع تجاري.
+                    </p>
+                    <a href="#contact-page-section">تواصل معنا</a>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <img src="imgs/hero-banner.webp" class="img-fluid" width="720" height="673" alt="hero-banner">
+                </div>
+            </div>
+        </div>
     </section>
+
+
+
     <section class="contact-page-section" id="contact-page-section">
         <div class="container">
             <div class="inner-container">
@@ -30,15 +57,15 @@
                             <div class="contact-form">
                                 <h4 class="mb-3">تقديم طلب</h4>
                                 <form id="landingPageForm" action="" method="post">
-                                    <input type="hidden" name="_token" value="9d7gwnW78y7loSM3N4jwWX17O26xdHAl3oENYY5T"
-                                        autocomplete="off"> <input type="hidden" name="_method" value="POST">
+                                    <input type="hidden" name="_token" value="" autocomplete="off"> <input type="hidden"
+                                        name="_method" value="POST">
                                     <input type="hidden" name="branch_id" value="2">
                                     <input type="hidden" name="source" value id>
                                     <div class="row clearfix">
                                         <div class="form-group col-md-12">
                                             <label class="label-form">الاسم</label>
                                             <input type="text" name="name" class="input_name" value maxlength="60"
-                                                placeholder="الاسم بالكامل">
+                                                placeholder="الاسم بالكامل" required>
                                             <label id="offer_name" class="error_sms" style="display: none"></label>
                                         </div>
                                         <div class="form-group col-md-12">
@@ -213,33 +240,36 @@
             </div>
         </div>
     </section>
+
+
+
     <div class="services-container">
         <div class="container">
             <div class="row">
                 <div class="item-services-container">
                     <div class="item-services">
-                        <img src="https://crm.numo.sa/landing_pages/img/winner_tabuk.png" class="lazyload">
+                        <img src="imgs/certificate.png" class="lazyload">
                         <h5>شهادات معتمدة</h5>
                         <p>اجعل خطواتك نحو النجاح أكثر قوة واستدامة باكتساب شهاداتنا المعتمدة</p>
                     </div>
                 </div>
                 <div class="item-services-container">
                     <div class="item-services">
-                        <img src="https://crm.numo.sa/landing_pages/img/candidate_tabuk.png" class="lazyload">
+                        <img src="imgs/diploma.png" class="lazyload">
                         <h5>التأهيل لسوق العمل</h5>
                         <p>استثمر في تطوير ذاتك لمواكبة سوق العمل المتقدم مع برامجنا المتنوعة .</p>
                     </div>
                 </div>
                 <div class="item-services-container">
                     <div class="item-services">
-                        <img src="https://crm.numo.sa/landing_pages/img/elearning_tabuk.png" class="lazyload">
+                        <img src="imgs/video-tutorials.png" class="lazyload">
                         <h5>تعلم الكتروني </h5>
                         <p>تعلم في أي وقت ومكان مع محتوى تعليمي مميز ومحاضرات مسجلة عبر التعلم عن بُعد.</p>
                     </div>
                 </div>
                 <div class="item-services-container">
                     <div class="item-services">
-                        <img src="https://crm.numo.sa/landing_pages/img/gateway_tabuk.png" class="lazyload">
+                        <img src="imgs/transfer.png" class="lazyload">
                         <h5>دفع ميسر</h5>
                         <p>تمتع بتعليم فريد مع إمكانية الدفع الميسر على دفعات
                         </p>
@@ -247,7 +277,7 @@
                 </div>
                 <div class="item-services-container">
                     <div class="item-services">
-                        <img src="https://crm.numo.sa/landing_pages/img/assurance_tabuk.png" class="lazyload">
+                        <img src="imgs/high-quality.png" class="lazyload">
                         <h5>برامج عالية الجودة</h5>
                         <p>برامج ذات جودة عالية تصقل امكانياتك بتعليم تفاعلي ومستمر
                         </p>
@@ -256,27 +286,24 @@
             </div>
         </div>
     </div>
-    <div class="timer-section" id="registration-form">
+
+
+    <section class="timer-section">
+        <h2 class="text-white">الوقت المتبقي لبدء البرنامج</h2>
         <div class="container">
-            <h4 class="mb-4">الوقت المتبقي لبدء البرنامج</h4>
-            <div class="clockdiv" id="clockdiv">
-                <div class="item-section">
-                    <span class="days"></span>
-                    <div class="smalltext">يوم</div>
-                </div>
-                <div class="item-section">
-                    <span class="hours"></span>
-                    <div class="smalltext">ساعة</div>
-                </div>
-                <div class="item-section"><span class="minutes"></span>
-                    <div class="smalltext">دقيقة</div>
-                </div>
-                <div class="item-section"><span class="seconds"></span>
-                    <div class="smalltext">ثانية</div>
-                </div>
+            <div class="clock">
+                <div id="days">00</div>
+                <span> : </span>
+                <div id="hour">00</div>
+                <span> : </span>
+                <div id="minute">00</div>
+                <span> : </span>
+                <div id="seconds">00</div>
             </div>
         </div>
-    </div>
+    </section>
+
+
     <section class="courses">
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
@@ -506,7 +533,7 @@
         </div>
     </section>
 
-    <div class="services-container services-container-course" style="display: none;">
+    <!-- <div class="services-container services-container-course">
         <div class="container">
             <h4 class="mt-3 mb-5 color-theme">إجراءات القبول
             </h4>
@@ -544,7 +571,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
     <div id="submit-button" class="btn-fixed btn-ghost"><span>سجل الآن</span></div>
     <div class="modal fade" id="sucsess-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -570,47 +598,6 @@
         </script>
     <script src="JS/popper.min.js"></script>
     <script src="JS/main.js"></script>
-
-    <script>
-        let formSubmitted = false;
-
-        document.getElementById('landingPageForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            if (formSubmitted) {
-                return; // Exit if the form has already been submitted
-            }
-            var lastPathSegment = window.location.pathname.split('/').filter(Boolean).pop();
-
-            console.log("Form submit event fired");
-
-            var submitButton = document.getElementById('submit_from_btn');
-            if (submitButton.disabled) {
-                return; // Exit if the form has already been submitted
-            }
-
-            formSubmitted = true; // Mark as submitted
-
-            var productSelect = document.querySelector('select[name="product_id"]');
-            var productName = productSelect.options[productSelect.selectedIndex].text;
-
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'form_submit_' + lastPathSegment,
-                'formData': {
-                    'name': document.querySelector('input[name="name"]').value,
-                    'email': document.querySelector('input[name="email"]').value,
-                    'phone': document.querySelector('input[name="phone"]').value,
-                    'product_name': productName,
-                }
-            });
-
-            setTimeout(() => {
-                submitButton.disabled = true;
-                this.submit();
-            }, 300);
-        });
-    </script>
 </body>
 
 </html>
